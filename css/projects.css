@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap');
+
+body {
+    margin: 0;
+    background-color: #444751;
+}
+
+div#btonav {
+    top: 0;
+    left: 20px;
+    max-height: 2%;
+    border-style: hidden;
+    border-color: white;
+    border-radius: 10px;
+    max-width: 25%;
+}
+
+div#btonav:hover {
+    border-style: solid;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 5%;
+    font-family: "Trispace", "sans-serif";
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Trispace", "sans-serif";
+    font-size: 25px;
+    color: white;
+    display:inline-block;
+    position: absolute;
+}
+
+a.plink {
+    top: 50px;
+    font-size: 35px;
+    font-family: "Trispace", "sans-serif";
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div.first-line {
+    margin-top: 7%;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.project-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-style: hidden;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+    width: 23vw;
+    height: 23vw;
+}
+
+.np {
+    position: absolute;
+    opacity: 0;
+    animation: setRightPosition, move2 0.8s, fadeIn 0.8s;
+    animation-fill-mode: forwards;
+}
+.nnp {
+    position: absolute;
+    opacity: 0;
+    animation: setLeftPosition, move2 0.8s, fadeIn 0.8s;
+    animation-fill-mode: forwards;
+}
+.np2 {
+    position: absolute;
+    animation: move 0.8s, fadeOut 0.8s;
+    animation-fill-mode: forwards;
+}
+.nnp2 {
+    position: absolute;
+    animation: nmove 0.8s, fadeOut 0.8s;
+    animation-fill-mode: forwards;
+}
+@keyframes move {
+    to {transform: translate(-400px);}
+}
+@keyframes nmove {
+    to {transform: translate(400px);}
+}
+@keyframes move2 {
+    to {transform: translate(0px);}
+}
+@keyframes setRightPosition {
+    to {transform: translate(400px);}
+}
+@keyframes setLeftPosition {
+    to {transform: translate(-400px);}
+}
+@keyframes fadeIn {
+    to {opacity: 1;}
+}
+@keyframes fadeOut {
+    to {opacity: 0;}
+}
+
+div.project {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #666666;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #474747;
+    border-width: 3px;
+    width: 22vw;
+    height: 22vw;
+}
+
+div.project img {
+    width: 21vw;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+}
+
+div.svgcontainer {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 20vw;
+}
+div.svgcontainer svg {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.svgcontainer svg:hover {
+    stroke-width: 4.5;
+}
